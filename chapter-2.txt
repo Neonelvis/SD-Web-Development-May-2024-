@@ -1,0 +1,31 @@
+Chapter 2 :HTML basics
+
+Introduction to HTML 
+
+HTML is the standard markup language used to structure and define the content of web pages. 
+It provides a way to organize and present information on the world wide web using a set of elements, tags and attributes. 
+
+HTMl is a markup language, which means it uses a system of tags or elements to annotate and structure the content of a web page.
+Unlike programming languages like JavaScript or Python, HTML does not have the ability to perform complex calculations or logic. Instead, it focuses on providing the structural foundation for web content and defining the sematic or meaning of different parts of a web page. 
+
+
+Brief History of HTML 
+HTML was originally conceived by sir Berners-Lee, a computer scientist at CERN, as a way to share and link documents among researchers.
+The initial version of HTML, was simple, with only a few tags for making up headers, paragraphs and links. 
+
+Over the years, HTML has evolved through several versions, each introducing new elements, attributes, and capabilities. 
+The current version is HTML5, which was officially released in 2014 by the World Wide Web Consortium (W3C) 
+HTML5 brought significant improvements, including better support for multimedia, offline capabilities, and semantic elements that enhance accessibility and search engine optimisation (SEO) 
+
+HTML Document Structure 
+Every HTML document follows a basic structure, which includes the following essential elements: 
+
+1. <!DOCTYPE html>: This declaration, placed at the beginning of the document, tells the web browser which version of HTML the page is using 
+
+2. <html>: This is the root element of an HTML document, containing all the other elements. 
+
+3. <head>: This element contains the metadata about the web page, such as the title, character encoding, and external resources (e.g CSS stylesheets, JavaScript files) 
+
+4. <title>: The title of the web page displayed in the browser's title bar or tab 
+
+5. <body>
