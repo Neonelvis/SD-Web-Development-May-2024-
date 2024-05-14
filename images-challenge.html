@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Images Challenge</title>
+    <style>
+        div{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px
+        }
+
+        figure{
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        figcaption{
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Showcase</h1>
+
+    <div>
+        <figure>
+            <img src="https://images.pexels.com/photos/20871281/pexels-photo-20871281/free-photo-of-a-black-and-white-photo-of-a-tree-in-the-fog.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Product 1" loading="lazy">
+            <figcaption>Product 1</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://images.pexels.com/photos/22240925/pexels-photo-22240925/free-photo-of-a-man-with-a-camera-in-his-hand-is-standing-in-front-of-a-broken-glass.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Product 2" loading="lazy">
+            <figcaption>Product 2</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://images.pexels.com/photos/21940156/pexels-photo-21940156/free-photo-of-trail-to-the-bridge.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Product 3" loading="lazy">
+            <figcaption>Product 3</figcaption>
+        </figure>
+    </div>
+</body>
+</html>
