@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tables Challenge</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin-right: 20px;
+        }
+
+        h1{
+            text-align: center;
+            color: #333;
+        }
+
+        table{
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        caption{
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th{
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even){
+            background-color: #f9f9f9;
+        }
+
+        .lunch-break{
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: #d9d9d9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weekly Class Timetable</h1>
+
+    <table>
+        <caption>Spring 2024 Semester</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>9:00 AM</th>
+                <td>Math</td>
+                <td></td>
+                <td>English</td>
+                <td></td>
+                <td>Science</td>
+            </tr>
+            <tr>
+                <th>10:00 AM</th>
+                <td></td>
+                <td>History</td>
+                <td></td>
+                <td>Art</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>11:00 AM</th>
+                <td>Physics</td>
+                <td></td>
+                <td>Chemistry</td>
+                <td></td>
+                <td>Biology</td>
+            </tr>
+            <tr>
+                <th>12:00 PM</th>
+                <td colspan="5" class="lunch-break">Lunch Break</td>
+            </tr>
+            <tr>
+                <th>1:00PM</th>
+                <td>Computer Science</td>
+                <td></td>
+                <td>Literature</td>
+                <td>Music</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>2:00PM</th>
+                <td></td>
+                <td>Physical Education</td>
+                <td></td>
+                <td></td>
+                <td>Geography</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
