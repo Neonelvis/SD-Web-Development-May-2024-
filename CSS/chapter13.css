@@ -1,0 +1,44 @@
+/* Universal Selectors */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Type Selectors */
+h1{
+    color: teal;
+}
+
+/* Class Selector */
+.heading-one {
+    color: crimson;
+}
+
+/* ID Selectors */
+#another-heading {
+    color: cornflowerblue;
+}
+
+/* Attribute Selectors */
+a[target="_blank"] {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 32px;
+    color: darksalmon;
+}
+
+/* Pseudo Classes */
+h2:hover {
+    color: green;
+    font-size: 32px;
+}
+
+li:nth-child(even) {
+    background-color: gray;
+    font-size: 26px;
+}
+
+/* Pseudo Elements */
+p::first-letter {
+    color: darkorange;
+}

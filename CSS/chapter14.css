@@ -1,0 +1,88 @@
+body {
+    font-family: "Open Sans, Arial, Helvetica, sans-serif";
+    font-size: 32px;
+}
+
+#normal {
+    font-style: normal;
+}
+
+#italic {
+    font-style: italic;
+}
+
+#oblique {
+    font-style: oblique;
+}
+
+#normal {
+    font-weight: normal;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+#lighter {
+    font-weight: lighter;
+}
+
+#bolder {
+    font-weight: bolder;
+}
+
+#sub-heading {
+    font-variant: small-caps
+}
+
+p {
+    line-height: 1.5;
+}
+
+#underline {
+    text-decoration: underline;
+}
+
+#overline {
+    text-decoration: overline;
+}
+
+#line-through {
+    text-decoration: line-through;
+}
+
+#no-decoration {
+    text-decoration: none;
+}
+
+#u-case {
+    text-transform: uppercase;
+}
+
+#l-case {
+    text-transform: lowercase;
+}
+
+#c-case {
+    text-transform: capitalize;
+}
+
+#left {
+    text-align: left;
+}
+
+#center {
+    text-align: center;
+}
+
+#right {
+    text-align: right;
+}
+
+#justify {
+    text-align: justify;
+}
+
+#another-heading {
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.4);
+}
