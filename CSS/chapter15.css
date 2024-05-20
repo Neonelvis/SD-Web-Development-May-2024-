@@ -1,0 +1,91 @@
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#firstp {
+    border-width: 2px;
+    border-style: solid;
+    border-color: crimson;
+}
+
+#secondp {
+    border-width: 3px;
+    border-style: dotted;
+    border-color: aquamarine;
+}
+
+#thirdp {
+    border-width: 4px;
+    border-style: double;
+    border-color: darkblue;
+}
+
+#fourthp {
+    border-width: 5px;
+    border-style: groove;
+    border-color: chartreuse;
+}
+
+#fifthp {
+    border-width: 6px;
+    border-style: dashed;
+    border-color: darkorange;
+}
+
+#sixthp {
+    border-width: 3px;
+    border-style: inset;
+    border-color: aqua;
+}
+
+#seventhp {
+    border-width: 3px;
+    border-style: outset;
+}
+
+#eighthp {
+    border-width: 9px;
+    border-style: ridge;
+}
+
+#ninthp {
+    border: 2px solid blue;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+#first-div {
+    border: 2px solid teal;
+}
+
+#tenthp {
+    border: 2px solid cornflowerblue;
+    /* margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px; */
+
+    /* margin: 10px 20px; */
+
+    margin: 20px;
+}
+
+#second-div {
+    border: 2px solid teal;
+}
+
+#eleventhp {
+    border: 2px dotted cornflowerblue;
+    margin: 10px 20px;
+    /* padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px; */
+    padding: 20px;
+} 

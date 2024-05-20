@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* css reset */
+body {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* nav */
+nav {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* main */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333
+}
+
+header h1 {
+    color: white;
+}
+
+h1 {
+    font-size:36px
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+
+.product img{
+    height: auto;
+    max-width: 100%;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.product p {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+}
