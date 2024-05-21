@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(179, 207, 198);
+}
+
+header{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 60px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+
+/* Transition Example */
+.transition-example {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.transition-example:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+
+/* Animation Example */
+.animation-example {
+    width: 100px;
+    height: 100px;
+    background-color: #fa3030;
+    animation: bounce 1s infinite;
+
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Transform example */
+.transform-example {
+    width: 100px;
+    height: 100px;
+    background-color: #30fa5c;
+    transform: rotate(45deg) skew(20deg);
+}
+
+
+
+/* a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: red;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+h2 {
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+h1 {
+    transform: rotate(5deg) scale(1.2);
+} */
+
