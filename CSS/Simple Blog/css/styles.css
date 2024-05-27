@@ -67,6 +67,10 @@ main h1 {
     color: green;
 }
 
+p {
+    line-height: 1.8;
+}
+
 .posts div {
     border: 2px solid rgba(126, 126, 126, 0.2);
     margin-bottom: 25px;
@@ -89,6 +93,11 @@ main h1 {
     text-align: center;
     padding: 10px;
 }
+
+/* img {
+    width: 400;
+    height: 300;
+} */
 
 
 form {
@@ -119,4 +128,12 @@ button {
 button:hover {
     background-color: rgb(139, 137, 137);
     color: rgb(243, 242, 240);
+}
+
+/* Footer Section */
+footer {
+    background-color: greenyellow;
+    padding: 40px;
+    margin-top: 800px;
+    text-align: center;
 }

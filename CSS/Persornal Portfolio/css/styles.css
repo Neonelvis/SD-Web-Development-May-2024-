@@ -99,7 +99,8 @@ main {
     padding: 24px 48px 48px 48px;
     border-radius: 20px;
     width: 100%;
-    margin: 0 auto;
+    margin: 64px auto;
+
 }
 
 h2 {
@@ -178,10 +179,10 @@ form button:hover {
 
 /* Footer Section */
 footer {
-    margin-top: 300px;
+    margin-top: auto;
     padding: 22px;
     background-color: #91c7ce;
     text-align: center;
     font-weight: bold;
-    color: rgb(36, 35, 35);
+    color: rgb(36, 35, 35);    
 }
