@@ -1,0 +1,122 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* General Layout  */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5fdf2;
+}
+
+/* Head Section */
+header {
+    /* background: linear-gradient(to right, #cce4f8, #a6e1e9); */
+    background: hsla(132, 79%, 68%, 1);
+    background: linear-gradient(90deg, hsla(132, 79%, 68%, 1) 0%, hsla(101, 62%, 48%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(132, 79%, 68%, 1) 0%, hsla(101, 62%, 48%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(132, 79%, 68%, 1) 0%, hsla(101, 62%, 48%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6EEE87", endColorstr="#5FC52E", GradientType=1 );
+    box-shadow: 0px 2px 4px rgba(2, 37, 0, 0.2);
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+header nav ul {
+    margin-top: 5px;
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li a {
+    margin: 20px;
+    text-decoration: none;
+    list-style: none;
+    /* background-color: rgb(54, 54, 54); */
+    padding: 10px;
+    color: rgb(88, 88, 87);
+    border-radius: 8px;
+    /* font-weight: bold; */
+    font-size: large;
+    border: 2px solid greenyellow;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 238, 238);
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+main h1 {
+    padding: 40px;
+    color: green;
+}
+
+.posts div {
+    border: 2px solid rgba(126, 126, 126, 0.2);
+    margin-bottom: 25px;
+    padding: 1rem;
+    border-radius: 10px;
+    /* animation-name: slide-left;
+    animation-duration: 3s; */
+}
+
+/* @keyframes slide-left {
+    from {
+        margin-right: -60px;
+    }
+    to {
+        margin-right: 0px;
+    }
+} */
+
+.posts div h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+}
+
+form input, textarea {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: 2px solid rgb(201, 201, 201);
+}
+
+button {
+    border-radius: 10px;
+    border: 2px solid rgb(77, 76, 76);
+    padding: 10px;
+    cursor: pointer;
+    width: 40%;
+    margin: 2px auto;
+    animation: background-color 0.6s ease, color 0.5s ease;
+}
+
+button:hover {
+    background-color: rgb(139, 137, 137);
+    color: rgb(243, 242, 240);
+}

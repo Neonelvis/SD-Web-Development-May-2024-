@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Webpage General Design */
+body {
+    font-family: 'Roboto', 'sans-serif', 'arial';
+    line-height: 1.6;
+    background-color: #fcf9f9;
+}
+
+/* Header Section */
+header {
+    /* background: linear-gradient(to right, #cce4f8, #a6e1e9); */
+    background: hsla(167, 68%, 73%, 1);
+
+    background: linear-gradient(90deg, hsla(167, 68%, 73%, 1) 0%, hsla(178, 59%, 48%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(167, 68%, 73%, 1) 0%, hsla(178, 59%, 48%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(167, 68%, 73%, 1) 0%, hsla(178, 59%, 48%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#8DE9D5", endColorstr="#32C4C0", GradientType=1 );
+    /* background-color: rgb(240, 248, 255); */
+    box-shadow: 0px 2px 4px rgba(0, 0, 20, 0.2);
+    /* position: sticky; */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+h1 i {
+    padding: 10px;
+}
+
+
+nav {
+    width: 100%;
+    /* margin-left: 200px; */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px;
+    margin: 0 auto;
+    max-width: 900px;
+    border-radius: 20px;
+    /* background-color: rgb(255, 255, 230); */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(32, 31, 31, 0.76);
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease;
+    display: inline-block;
+    animation-name: slide-right;
+    animation-duration: 4s;
+}
+
+
+nav ul li a:hover {
+    background-color: rgb(29, 29, 29);
+    color: rgb(255, 255, 255);
+    transform: translateY(-2px);
+}
+
+@keyframes slide-right {
+    from {
+        margin-left: -30px;
+    }
+    to {
+        margin-left: 0px;
+    }
+}
+
+/* Main Section */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    background-color: #ffffff;
+    flex-direction: column;
+    padding: 24px 48px 48px 48px;
+    border-radius: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: xx-large;
+}
+
+/* Projects Area */
+main .project {
+    border: 2px solid grey;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgb(248, 247, 247);
+}
+
+main .project h3 {
+    text-align: center;
+}
+
+main .project img {
+    width: 350px;
+    height: 200px;
+}
+
+main .project a {
+    border: 2px solid grey;
+    background-color: rgb(168, 167, 167);
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    margin-left: 100px;
+    transition: background-color 0.3 ease;
+    /* animation: transform 0.3s ease; */
+}
+
+main .project a:hover {
+    background-color: rgb(151, 151, 151);
+    transform: translateY(3px);
+}
+
+/* Contact form */
+
+main div {
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+main div form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, textarea {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgb(255, 250, 244);
+    border: 2px inset rgba(0, 0, 20, 0.1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+form button {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 2px auto;
+    cursor: pointer;
+    animation: background-color 0.3s ease, transform 0.1s ease;
+}
+
+form button:hover {
+    background-color: rgb(216, 216, 216);
+    transform: translateY(-1px);
+}
+
+/* Footer Section */
+footer {
+    margin-top: 300px;
+    padding: 22px;
+    background-color: #91c7ce;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(36, 35, 35);
+}
