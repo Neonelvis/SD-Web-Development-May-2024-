@@ -154,17 +154,224 @@ console.log(!(x === y)); //true
 // 1. Conditional Statements 
 // -> if...else statement: Ececutes a block of code if a condition is true (or false for the else block)
 // -> if...else if...else 
-// -> switch statement: Evaluates an expression and executes the associated the associated block of code based on matching cases.
+// -> switch statement: Evaluates an expression and executes the associated block of code based on matching cases.
+// Examples 
+let userAge = 18; 
+
+// single if statement
+if (userAge >= 18) {
+    console.log("You are an Adult!")
+}
+
+// if/else statement
+let myNum = 10; 
+
+if (myNum >= 20) {
+    console.log(myNum + " is greater than 20.")
+} else {
+    console.log(myNum + " is less than 20.")
+}
+
+// if/elseif/else
+let MyOtherNumber = 5; 
+
+if (MyOtherNumber > 5) {
+    console.log("5 is greater than 5")
+} else if (MyOtherNumber == 5) {
+    console.log("5 is equal than 5")
+} else if (MyOtherNumber < 5) {
+    console.log("5 is less than 5")
+} else {
+
+}
+
+// switch statement 
+let favColor = "Red"; 
+
+switch (favColor) {
+    case "Blue":
+        console.log("Your Favorite color is Blue");
+        break;
+    case "Green":
+        console.log("Your favourite color is Green");
+        break;
+    case "Red":
+        console.log("Your favorite color is Red");
+        break;
+    default:
+        console.log("We dont know your favorite color!");
+}
+
+
+// Exercise 
+// write a JavaScript program that that converts temperature to Celcius. If the temperature is below 0, prints "Freezing", if it is between 0 and 30, print "Cold", if it is between 30 and 60, print "warm" and if it is above 60, print "hot"
+
+let temperature = 30
+
+let temperature_in_degrees = (temperature - 32) * 5 / 9
+console.log(temperature_in_degrees)
+
+if (temperature_in_degrees < 0) {
+    console.log("Freezing")
+} else if (temperature_in_degrees >= 0 && temperature_in_degrees < 30 ) {
+    console.log("Cold")
+} else if (temperature_in_degrees >=30 && temperature_in_degrees < 60) {
+    console.log("Warm")
+} else {
+    console.log("Hot")
+}
+
+// A program that prints the day of the week using switch statement. The switch variable should be integer 1 to 7.
+let Day = 7
+
+switch (Day) {
+    case 1:
+        console.log("Sunday")
+        break 
+    case 2:
+        console.log("Monday")
+        break 
+    case 3:
+        console.log("Tuesday")
+        break
+    case 4: 
+        console.log("Wednesday") 
+        break 
+    case 5:
+        console.log("Thursday") 
+        break 
+    case 6:
+        console.log("Friday")
+        break 
+    case 7: 
+        console.log("Saturday")
+        break
+    default:
+        console.log("Invalid Number")
+}
+
 
 // 2. Loops 
 // -> for loop: Executes a block of code a specific number of times based on a counter variable
-// -> while loop: Executes a block of code as long as a specified condition is true 
-// -> do...while loop: Similar to while loop, but the code block is executed at least once before checking the condition
+for (let i = 1; i <= 10; i++) {
+    console.log(i) // 1 2 3 4 5 6 7 8 9 `0
+}
+
+// Output: 10 9 8 7 6 5 4 3 2 1
+
+
+for (let num = 10; num > 0; num = num - 1) {
+    console.log(num)
+}
+
+
+// for (let num = 10; num > 0; num--) {
+//     console.log(num)
+// }
+
+
+// -> while loop: Executes a block of code as long as a specified condition is true
+let k = 1
+while (k <= 10) {
+    console.log(k)
+    k++
+}
+
+// -30 -15 0 15 30
+let number = -30
+while (number <= 30){
+    console.log(number)
+    number += 15
+}
+
+// -> do...while loop: Similar to while loop, but the code block is executed at least once before checking the 
+let c = 1 
+do {
+    console.log(c)
+    c++
+} while (c <= 10)
 
 // 3. Break and Continue Statements 
 // -> break statement: Exits the current loop or switch statement 
 // -> continue statement: Skips the current iteration of a loop and moves to the next iteration. 
+for (let a = 1; a <= 10; a++) {
+    if (a === 6 ) {
+        break
+    }
+    console.log(a)
+}
+
+// 5 x 1 = 5
+// 5 x 2 = 10
+// 5 x 12 = 60
+
+for (let value = 1; value <= 20; value++) {
+    let result = value * 5
+    console.log("5 x " + value + " = " + result )
+}
 
 // The control flow statements allow you to create complex logic and algorithms in your JavaScript code. 
 
-// Examples
+
+// 2.4 Functions
+// Functions are reusable blocks of code that perform a specific task. They can take input parameters, perform operations, and optionally return a value. 
+
+// Function Declaration 
+// function functionName(param1, param2, ...) {
+//     // function body 
+//     return value;
+// }
+
+function greetings() {
+    console.log("Hello Everyone!")
+}
+
+greetings()  
+
+function addNumbers() {
+    let n1 = 3
+    let n2 = 7
+    let sum = n1 + n2 
+    console.log("The sum is: " + sum)
+}
+
+addNumbers()
+
+function addTwoNumbers(x, y) {
+    let sum = x + y 
+    console.log("The sum is: " + sum)
+}
+
+addTwoNumbers(10, 20)
+addTwoNumbers(122, 78)
+
+function displayUserName(userName) {
+    return userName 
+}
+
+console.log(displayUserName("Elvis"))
+
+let userName = displayUserName("Elvis")
+console.log(userName)
+
+// create a function that takes a year as an argument and returns true if the year is a leap year and false if otherwise. A leap year is divisble by 4, but not divisible by 100, unless it is also divisible by 400 
+
+function leapYear(year) {
+    if ((year % 4) === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(leapYear(2001))
+
+function Leap_year(year) {
+    if (((year % 4) === 0 && (year % 100) !== 0) || (year % 400) === 0 ) {
+        return true 
+    } else {
+        return false
+    }
+}
+
+console.log(Leap_year(2004))
