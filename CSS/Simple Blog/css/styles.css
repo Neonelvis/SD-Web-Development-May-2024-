@@ -8,6 +8,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5fdf2;
+    /* background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
 }
 
 /* Head Section */
@@ -71,6 +75,8 @@ p {
     line-height: 1.8;
 }
 
+
+/* Posts section */
 .posts div {
     border: 2px solid rgba(126, 126, 126, 0.2);
     margin-bottom: 25px;
@@ -98,6 +104,23 @@ p {
     width: 400;
     height: 300;
 } */
+
+.post_options {
+    display: flex;
+    background-color: greenyellow;
+    padding: 7px;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.post_options h2 {
+    padding: 10px;
+}
+
+.post_options #latest {
+    background-color: rgb(250, 249, 249);
+    border-radius: 20px;
+}
 
 
 form {

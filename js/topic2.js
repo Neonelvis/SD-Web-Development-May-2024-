@@ -375,3 +375,131 @@ function Leap_year(year) {
 }
 
 console.log(Leap_year(2004))
+
+
+// Arrays 
+// Arrays in JavaScript are used to store unordered collection of values. 
+// Arrays can contain values of different data types, including objects and other arrays(multi-dimensional arrays)
+
+// 1. Creating and initializing Arrays 
+// const arr = [value1, value2, ...addNumbers, valueN]
+
+// const emptyArr = []
+const fruits = ['apple', 'banana', 'orange']
+
+const numbers = [1, 2, 3, 4, 5]
+
+const mixed = ['hello', 42, true, null]
+
+// 2. Array Methods 
+// push() and pop(): Add and remove elements from the end of an array 
+// shift() and unshift(): Add and remove elements from the beginning of an array 
+// slice(): Returns shallow copy of a portion of an array 
+// splice(): Changes the contents of an array by removing or replacing existing elements and/or adding new elements 
+// concat(): Merges two or more arrays and returns a new arrays 
+// indexOf() and lastIndexOf(): Returns the index of the first or last occurrence of a specified element in the array. 
+// includes(): Determines whether an array includes a certain value 
+// reverse(): Reverses the order of elements in the array 
+// sort(): Sorts the array elements in place 
+// map(), filter() and reduce(): High-order functions for transforming and manipulating arrays
+
+// push()
+fruits.push('grape') // adds a new fruit at the end 
+console.log(fruits)
+
+// pop()
+fruits.pop() // removes a fruit at the end
+console.log(fruits)
+
+// unshift()
+fruits.unshift('kiwi') // adds a new fruit at the beginning
+console.log(fruits)
+
+// shift()
+fruits.shift() // removes a fruit at the beginning
+console.log(fruits)
+
+// slice()
+let slicedArray = fruits.slice(1, 3)
+console.log(slicedArray)
+
+// splice()
+fruits.splice(2, 1)
+console.log(fruits)
+
+// concat()
+let newArray = ['mango', 'pineapple']
+let combinedArray = fruits.concat(newArray)
+console.log(combinedArray)
+
+
+// 3. Array Iteration 
+// forEach(): Executes a provided function once for each array element
+// map(): Creates a new array with the results of calling a provided function on every element of the original array 
+// filter(): Creates a new array with all elements that pass the test implemented by the provided function 
+// reduce(): Applies a function against an accumulator and each element of the array to it to a single value
+
+// forEach()
+fruits.forEach(fruit => {
+    console.log(fruit)
+})
+
+// map()
+const doubledNumbers = numbers.map(num => num * 2)
+console.log(doubledNumbers)
+
+// filter()
+const evenNumbers = numbers.filter(num => num % 2 === 0) 
+console.log(evenNumbers)
+
+// reduce()
+const sum = numbers.reduce((acc, num) => acc + num, 0) 
+console.log(sum)
+
+// Objects
+// Objects in Javaxript are unordered collection of key-value pairs.
+// They are used to store complex data structures and represent real-world entities
+
+// 1. Object Literal 
+// const obj = {
+//     key1: value1, 
+//     key2: value2,
+//     ...,
+//     keyN: valueN
+// }
+
+const person1 = {
+    name: 'Elvis', 
+    age: 20, 
+    greet: function() {
+        console.log('Hello, my name is ${this.name}');
+    }
+}
+
+// 2. Accessing and Modifying Object Properties 
+// obj.key1 // Dot notation 
+// obj['key2'] // Bracket Notation 
+
+// Adding a new property 
+// obj.newKey = newValue 
+
+// removing a property 
+// delete obj.key2 
+
+console.log(person1.name)
+
+person1.age = 50
+console.log(person1) 
+
+// 3. Object Methods
+// const obj = {
+//     method1: function() {
+//         // method body 
+//     }, 
+//     method2() {
+//         // Method body (shorthand style)
+//     }
+// }
+
+// 4. The 'this' keyword 
+// The 'this' keyword refers to the current object context. Its value depends on how the function is called.
