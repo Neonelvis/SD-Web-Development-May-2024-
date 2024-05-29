@@ -469,12 +469,14 @@ console.log(sum)
 // }
 
 const person1 = {
-    name: 'Elvis', 
+    name: 'Elvis Kamau', 
     age: 20, 
     greet: function() {
-        console.log('Hello, my name is ${this.name}');
+        console.log(`Hello, my name is ${this.name}`);
     }
 }
+
+
 
 // 2. Accessing and Modifying Object Properties 
 // obj.key1 // Dot notation 
@@ -491,6 +493,10 @@ console.log(person1.name)
 person1.age = 50
 console.log(person1) 
 
+person1.occupation = 'Software Developer'
+
+console.log(person1)
+
 // 3. Object Methods
 // const obj = {
 //     method1: function() {
@@ -500,6 +506,8 @@ console.log(person1)
 //         // Method body (shorthand style)
 //     }
 // }
+
+person1.greet()
 
 // 4. The 'this' keyword 
 // The 'this' keyword refers to the current object context. Its value depends on how the function is called.
