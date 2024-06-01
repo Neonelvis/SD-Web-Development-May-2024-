@@ -77,33 +77,9 @@ p {
 
 
 /* Posts section */
-.posts .post_items{
-    border: 2px solid rgba(126, 126, 126, 0.2);
-    margin-bottom: 25px;
-    padding: 1rem;
-    border-radius: 10px;
-    /* animation-name: slide-left;
-    animation-duration: 3s; */
+.posts {
+    margin-top: 20px;
 }
-
-/* @keyframes slide-left {
-    from {
-        margin-right: -60px;
-    }
-    to {
-        margin-right: 0px;
-    }
-} */
-
-.posts div h3 {
-    text-align: center;
-    padding: 10px;
-}
-
-/* img {
-    width: 400;
-    height: 300;
-} */
 
 .post_options {
     display: flex;
@@ -114,31 +90,68 @@ p {
     cursor: pointer;
 }
 
-.post_options h2 {
-    padding: 10px;
-}
-
 .post_options #latest {
     background-color: rgb(250, 249, 249);
     border-radius: 20px;
 }
 
-.posts div img {
-    height: 130px;
-    width: 130px;
-    border-radius: 50%;
+.post_options h2 {
+    padding: 10px;
 }
 
-.post-section {
+.posts .post_items{
+    border: 2px solid rgba(126, 126, 126, 0.2);
+    margin-bottom: 25px;
+    padding: 5px;
+    border-radius: 10px;
     display: flex;
-    border: 0px;
+    transition: background-color 0.4s ease-in-out;
 }
-/* 
+.post_items:hover {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+.posts div h3 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.posts div img {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    border: 5px groove rgb(192, 192, 192);
+}
+
+.post_info {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 0 0 10px;
+
+}
+
 .opening_statements {
-    top: -30px;
-    color: red;
-    
-} */
+    color: rgb(78, 78, 78);
+    font-size: 24px;
+    transition: color 0.2s ease;
+}
+
+.opening_statements:hover {
+    color: black;
+}
+
+.post-link {
+    text-decoration: none;
+    color: black;
+}
+
+.dates {
+    color: rgb(184, 184, 184);
+    display: flex;
+}
 
 /* Form section */
 form {
@@ -163,7 +176,7 @@ button {
     cursor: pointer;
     width: 40%;
     margin: 2px auto;
-    animation: background-color 0.6s ease, color 0.5s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
