@@ -11,7 +11,7 @@
 
 // Despite its name, JavaScript is not related to Java Programming Language and has a different syntax and semantics.
 
-// JavaScript is a client-side scripting language, which means that the code is executed in the user's web browser. However, with the introduction of Node.js, JavaScritp can also be used for server-side scripting, allowing developers to build more web applications using a single language.
+// JavaScript is a client-side scripting language, which means that the code is executed in the user's web browser. However, with the introduction of Node.js, JavaScript can also be used for server-side scripting, allowing developers to build more web applications using a single language.
 
 
 // 1.2 How JavaScript works 
