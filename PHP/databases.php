@@ -1,100 +1,107 @@
 <?php 
 
-    // Database connection details
-    $hostname = "localhost";
-    $username = "root"; 
-    $password = "";
-    $dbname = "crud_db";
+// Database connection details
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "crud_db";
 
-    // create connection to the database 
-    $conn = mysqli_connect($hostname, $username, $password, $dbname);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    // check if the connection is successful 
-    if (mysqli_connect_errno()) {
-        die("Connection Failed!" . mysqli_connect_error());
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// CRUD functions
+
+// Create (Insert)
+function createUser($conn, $name, $email)
+{
+    $sql = "INSERT INTO user (name, email) VALUES ('$name', '$email')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully.";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
+}
 
-    // CRUD functions/operations 
+// Read (Select)
+function readUsers($conn)
+{
+    $sql = "SELECT * FROM user";
+    $result = $conn->query($sql);
 
-    // create (INSERT)
-    function createUser($conn, $name, $email) {
-        $query = "INSERT INTO user (name, email) VALUES ('$name', '$name)";
+    if ($result->num_rows > 0) {
+        echo "<table>";
+        echo "<tr><th>ID</th><th>Name</th><th>Email</th><th>Actions</th></tr>";
 
-        if (mysqli_query($conn, $query)) {
-            echo "New User Created Successfully!";
-        } else {
-            echo "Error: " . $query . "<br>" . mysqli_error($conn);
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $row['id'] . "</td>";
+            echo "<td>" . $row['name'] . "</td>";
+            echo "<td>" . $row['email'] . "</td>";
+            echo "<td>
+                <a href='?action=update&id=" . $row['id'] . "'>Update</a>
+                <a href='?action=delete&id=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this user?\")'>Delete</a>
+            </td>";
+            echo "</tr>";
         }
+
+        echo "</table>";
+    } else {
+        echo "No data found.";
     }
+}
 
-    // Read (SELECT)
-    function readUsers($conn) {
-        $query = "SELECT * FROM user";
-        $result = mysqli_query($conn, $query);
+// Update
+function updateUser($conn, $id, $name, $email)
+{
+    $sql = "UPDATE user SET name='$name', email='$email' WHERE id=$id";
 
-        if (mysqli_num_rows($result) > 0) {
-            echo "<table>";
-            echo "<tr><th>ID</th><th>Name</th><th>Email</th></tr>";
-            echo "</table>";
-
-            while($row = mysqli_fetch_assoc($result)) {
-                echo "<tr>";
-                echo "<td>" . $row['id'] . "</td>";
-                echo "<td>" . $row['name'] . "</td>";
-                echo "<td>" . $row['email'] . "</td>";
-                echo "<td>
-                    <a href='?action=update&id=" . $row['id'] . "'>Update</a>
-                    <a href='?action=update&id=" . $row['id'] . "'>Delete</a>
-                </td>";
-                echo "</tr>";
-            }
-        } else {
-            echo "No Data Found. Try again later!";
-        }
+    if ($conn->query($sql) === TRUE) {
+        echo "Record updated successfully.";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
+}
 
-    // Update (UPDATE)
-    function updateUser($conn, $id, $name, $email) {
-        $query = "UPDATE user SET name = '$name', email = '$email' WHERE id = '$id'";
+// Delete
+function deleteUser($conn, $id)
+{
+    $sql = "DELETE FROM user WHERE id=$id";
 
-        if (mysqli_query($conn, $query) === TRUE) {
-            echo "User Updated Successfully!";
-        } else {
-            echo "Error: " . $query . "<br>" . mysqli_error($conn);
-        }
+    if ($conn->query($sql) === TRUE) {
+        echo "Record deleted successfully.";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-    // Delete (DELETE)
-    function deleteUser($conn, $id) {
-        $query = "DELETE FROM user WHERE id = '$id'";
+}
 
-        if (mysqli_query($conn, $query) === TRUE) {
-            echo "User Deleted Successfully!";
-        } else {
-            echo "Error: " . $query . "<br>" . mysqli_error($conn);
-        }
+// Handle actions
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $action = $_POST['action'];
+    $id = isset($_POST['id']) ? $_POST['id'] : null;
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+
+    switch ($action) {
+        case 'create':
+            createUser($conn, $name, $email);
+            break;
+        case 'update':
+            updateUser($conn, $id, $name, $email);
+            break;
+        case 'delete':
+            deleteUser($conn, $id);
+            break;
     }
-    // Handle Actions
-
-    if ($_SERVER['REQUEST_METHOD'] === "POST") {
-        $action = $_POST["action"];
-        $id = $_POST["id"] ? $_POST["id"] : null;
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-
-        switch ($action) {
-            case 'create':
-                createUser($conn, $name, $email );
-                break;
-            case 'update':
-                updateUser($conn, $id, $name, $email );
-                break;
-            case 'delete':
-                deleteUser( $conn, $name);
-                break;
-        }
-    }
+}
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -110,7 +117,7 @@
 
     <h2>
         <?php
-            if ($_GET['action'] && $_GET['action'] === 'update') {
+            if (isset($_GET['action']) && $_GET['action'] === 'update') {
                 $id = $_GET['id'];
                 $query = "SELECT * FROM user WHERE id = '$id'";
                 $result = mysqli_query($conn, $query);
@@ -128,10 +135,15 @@
     </h2>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-    <input type="hidden" name="action"  value="<?php echo (isset($row['action'])  && $_GET['action'] === 'update') ? 'Update' : 'Create'; ?>"> <br>
-    Name: <input type="text" name="name" required value="<?php echo isset($row['name']) ? $row['name'] : ''; ?>"> <br>
-    Email: <input type="email" name="email" required value="<?php echo isset($row['name']) ? $row['name'] : ''; ?>"> <br>
-    <input type="submit" value="<?php echo (isset($row['action'])  && $_GET['action'] === 'update') ? 'Update' : 'Create'; ?>">
+        <input type="hidden" name="action" value="<?php echo  (isset($_GET['action']) && $_GET['action'] === 'update') ? 'update' : 'create'; ?>">
+
+        <input type="hidden" name="id" value="<?php echo isset($row['id']) ? $row['id'] : ''; ?>">
+
+        Name: <input type="text" name="name" value="<?php echo isset($row['name']) ? $row['name'] : '' ?>"> 
+
+        Email: <input type="email" name="email" value="<?php echo isset($row['email']) ? $row['email'] : '' ?>"> 
+
+        <input type="submit" value="<?php echo (isset($_GET['action']) && $_GET['action'] === 'update') ? 'Update' : 'Create'; ?>">
     </form>
 
 </body>
